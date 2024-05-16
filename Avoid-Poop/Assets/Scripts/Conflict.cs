@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class Conflict : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    private GameObject gameOverPanel;
 
-    // Update is called once per frame
-    void Update()
+    private void OnCollisionEnter2D(Collision2D other)
     {
-        
+        if (other.gameObject.tag == "Poop");
+        {
+            Time.timeScale = 0f;
+            gameOverPanel.SetActive(true);
+        }
     }
 }
