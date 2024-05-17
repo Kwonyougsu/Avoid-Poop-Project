@@ -38,6 +38,7 @@ public class HPManager : MonoBehaviour
                 heart2.SetActive(false);
                 break;
             case 0:
+                heart1.SetActive(false);
                 Time.timeScale = 0f;
                 break;
         }
