@@ -11,8 +11,8 @@ public class ButtonFunction : MonoBehaviour
 
     public void StartBtn()
     {
-        //¸ÞÀÎ ¾ÀÀ¸·Î ÀÌµ¿ 
-        SceneManager.LoadScene(0);
+        //ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ìµï¿½ 
+        SceneManager.LoadScene(1);
     }
     public void Soundsetting()
     {
