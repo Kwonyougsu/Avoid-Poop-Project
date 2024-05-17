@@ -7,11 +7,9 @@ using UnityEngine.UI;
 public class ButtonFunction : MonoBehaviour
 {
     public GameObject SoundSetting;
-
-
     public void StartBtn()
     {
-        //ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ìµï¿½ 
+        //¸ÞÀÎ ¾ÀÀ¸·Î ÀÌµ¿ 
         SceneManager.LoadScene(1);
     }
     public void Soundsetting()
@@ -26,5 +24,9 @@ public class ButtonFunction : MonoBehaviour
     public void AudioOffToggle()
     {
         AudioListener.volume = 0.0f;
+    }
+    public void Close()
+    {
+        SoundSetting.SetActive(false);
     }
 }
