@@ -8,6 +8,7 @@ public class TopDownMovement: MonoBehaviour
     private Vector2 movementDirection; 
     private TopDownAimRotation aim;    
     public GameObject[] charNum;
+    private Animator anim;
     [SerializeField] private int speed=5;
     
     private void Awake()
@@ -22,10 +23,17 @@ public class TopDownMovement: MonoBehaviour
     private void Start()
     {
         controller.OnMoveEvent +=  Move;
+        anim=GetComponentInChildren<Animator>();   
     }
     private void Move(Vector2 dire)
     {
         movementDirection=dire;
+        if(dire.magnitude>0)
+        { 
+            anim.SetBool("isMove",true);
+        }
+        else 
+            anim.SetBool("isMove",false);
     }
     private void FixedUpdate() 
     {
