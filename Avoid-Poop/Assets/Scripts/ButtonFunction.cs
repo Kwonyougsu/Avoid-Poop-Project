@@ -19,6 +19,7 @@ public class ButtonFunction : MonoBehaviour
 
     public void AudioOnToggle()
     {
+        //사운드 조절
         AudioListener.volume = 1.0f;
     }
     public void AudioOffToggle()

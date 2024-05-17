@@ -5,7 +5,6 @@ using UnityEngine;
 public class DataManger : MonoBehaviour
 {
     public static DataManger instance;
-    public static AudioListener audioListener;
     public string userName;
     public int charNum;
     
@@ -16,7 +15,6 @@ public class DataManger : MonoBehaviour
         {
             instance = this;
             DontDestroyOnLoad(this.gameObject);
-            DontDestroyOnLoad(audioListener.gameObject);
         }
     }
 }
