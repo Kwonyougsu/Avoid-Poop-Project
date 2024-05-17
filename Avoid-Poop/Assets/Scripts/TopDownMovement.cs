@@ -6,12 +6,17 @@ public class TopDownMovement: MonoBehaviour
     private TopDownController controller;
     private Rigidbody2D movementRigidbody;
     private Vector2 movementDirection; 
+    private TopDownAimRotation aim;    
+    public GameObject[] charNum;
     [SerializeField] private int speed=5;
     
     private void Awake()
     {
         controller = GetComponent<TopDownController>();
         movementRigidbody=GetComponent<Rigidbody2D>();
+        aim=GetComponent<TopDownAimRotation>();
+        charNum[DataManger.instance.charNum].SetActive(true);
+        aim.InitCharRenderer(charNum[DataManger.instance.charNum].GetComponent<SpriteRenderer>());
     }
 
     private void Start()

@@ -26,4 +26,9 @@ public class TopDownAimRotation : MonoBehaviour
         float rotZ=Mathf.Atan2(dire.y,dire.x)*Mathf.Rad2Deg;
         characterRenderer.flipX=Mathf.Abs(rotZ) > 90f;        
     }
+    public void InitCharRenderer(SpriteRenderer sp)
+    {
+        characterRenderer=sp;
+    }
+
 }
