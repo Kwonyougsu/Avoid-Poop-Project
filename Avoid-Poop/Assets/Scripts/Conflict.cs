@@ -4,13 +4,16 @@ using UnityEngine;
 
 public class Conflict : MonoBehaviour
 {
+    HPManager HPManager;
+
     private GameObject gameOverPanel;
 
-    private void OnCollisionEnter2D(Collision2D other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Poop");
+        if (other.gameObject.tag == "Poop")
         {
-            Time.timeScale = 0f;
+            Debug.Log("Ouch");
+            HPManager.hp -= 1;
             gameOverPanel.SetActive(true);
         }
     }

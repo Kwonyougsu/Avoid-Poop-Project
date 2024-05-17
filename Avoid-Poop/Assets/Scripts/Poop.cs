@@ -13,9 +13,19 @@ public class Poop : MonoBehaviour
         transform.position = new Vector3(x, y, 0);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        
+        if(other.gameObject.tag == "Poop")
+        {
+
+        }
+        else
+        {
+             Destroy(this.gameObject);
+        }
     }
+
+
+
+
 }
