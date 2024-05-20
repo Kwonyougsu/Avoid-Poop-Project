@@ -11,8 +11,8 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        InvokeRepeating("MakePoop", 0f, 6f);
-        InvokeRepeating("MakeItem", 0f, 0.1f);
+        InvokeRepeating("MakePoop", 0f, 0.2f);
+        InvokeRepeating("MakeItem", 0f, 3f);
     }
 
     void Awake()
@@ -30,7 +30,7 @@ public class GameManager : MonoBehaviour
 
     private void MakeItem()
     {
-        int ItemNum = Random.Range(0, 1);
+        int ItemNum = Random.Range(0, 4);
         Instantiate(Item[ItemNum]);
     }
 

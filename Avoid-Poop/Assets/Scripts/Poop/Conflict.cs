@@ -21,32 +21,30 @@ public class Conflict : MonoBehaviour
         }
 
         if (other.gameObject.tag == "Item")
-        {               
+        {  
             //보호막         
-            if(other.gameObject.name=="ShieldItem")
-            {
-                Debug.Log("Shield");
-                Vector3 playerPos = this.transform.position;
+            if(other.gameObject.name=="ShieldItem(Clone)")
+            {   
                 // Shield 프리팹을 인스턴스화하고 위치 설정
-                Instantiate(shield, playerPos, Quaternion.identity);
+                GameObject obj = Instantiate(shield, transform); 
                 // 5초 후에 Shield 프리팹을 파괴
-                Destroy(shield, destroyTime);
+                Destroy(obj, destroyTime);
             }
             //체력회복 
-            else if(other.gameObject.name=="Heal")
+            else if(other.gameObject.name=="Heal(Clone)")
             {
                 Debug.Log("Heal");
                 if(HPManager.hp < 5)
                 HPManager.hp += 1;
             }
             //점수2배 아이탬
-            else if(other.gameObject.name=="Fever")
+            else if(other.gameObject.name=="Fever(Clone)")
             {
                 Debug.Log("Fever");
                 //난이도에따른 점수계산구현후 추가구현할예정
             }
             //똥전부제거
-            else if(other.gameObject.name=="Clear")
+            else if(other.gameObject.name=="Clear(Clone)")
             {   
                 Debug.Log("Clear");
                 // "Poop" 태그를 가진 모든 게임 오브젝트를 찾아 배열로 저장           

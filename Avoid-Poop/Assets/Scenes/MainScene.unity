@@ -1861,7 +1861,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Poop: {fileID: 7775089772548589212, guid: 8847ca550ffe98145acb9b33ba5af6d3, type: 3}
   Item:
+  - {fileID: 2817794551445955156, guid: b3e50afd9017a724a8cb6c0fba872f3d, type: 3}
   - {fileID: 5097781410767387847, guid: eaf727da6b5817a44a28c4bad7e0802f, type: 3}
+  - {fileID: 3445804234927964145, guid: 378e1e2907cb430449261691daddebda, type: 3}
+  - {fileID: 7750682716667499783, guid: 60650a109b61a284087541c2801a234b, type: 3}
   endPanel: {fileID: 845732741}
 --- !u!4 &1792592616
 Transform:
