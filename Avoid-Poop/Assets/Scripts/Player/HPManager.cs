@@ -6,10 +6,7 @@ using UnityEngine.UIElements;
 public class HPManager : MonoBehaviour
 {
     private Image img;
-
     public static int hp;
-    // 스태틱을 사용하면 -> 메모리에 자리를 차지하고있어서 초기화를 시켜줘야한다. (씬로드를 해도)
-
     public GameObject heart1;
     public GameObject heart2;
     public GameObject heart3;
@@ -26,14 +23,20 @@ public class HPManager : MonoBehaviour
     {
         switch (hp)
         {
+            case 5:
+                heart5.SetActive(true);
+                break;
             case 4:
                 heart5.SetActive(false);
+                heart4.SetActive(true);
                 break;
             case 3:
                 heart4.SetActive(false);
+                heart3.SetActive(true);
                 break;
             case 2:
                 heart3.SetActive(false);
+                heart2.SetActive(true);
                 break;
             case 1:
                 heart2.SetActive(false);
