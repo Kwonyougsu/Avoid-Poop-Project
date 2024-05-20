@@ -46,6 +46,7 @@ public class ButtonFunction : MonoBehaviour
     {
         // 게임 다시하기
         SceneManager.LoadScene(1);
+        
     }
     public void back()
     {

@@ -10,6 +10,10 @@ public class GameManager : MonoBehaviour
     {
         InvokeRepeating("MakePoop", 0f, 0.1f);
     }
+    private void Update()
+    {
+        
+    }
 
     private void MakePoop()
     {
