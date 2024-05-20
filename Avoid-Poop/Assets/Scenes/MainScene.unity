@@ -2669,11 +2669,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentScoreTxt: {fileID: 805414210}
   highScoreText: {fileID: 936787331}
-  Ranker1: {fileID: 0}
-  Ranker2: {fileID: 0}
-  Ranker3: {fileID: 0}
-  Ranker4: {fileID: 0}
-  Ranker5: {fileID: 0}
+  currentScore: 0
   nowScoreTxt: {fileID: 96685595}
   HighScoreText: {fileID: 1918913370}
   endPanel: {fileID: 845732741}
