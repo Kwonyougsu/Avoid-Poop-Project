@@ -66,10 +66,10 @@ public class ScoreManager : MonoBehaviour
         }
     }
 
-
+    // 현재 플레이어의 점수와 이름을 받아서 실행됨
     private void RankingSet(float currentScore, string currentName)
     {
-        // �ϴ��� ���翡 ����
+        // 현재에 저장하고 시작
         PlayerPrefs.SetString("CurrentPlayerName", currentName);
         PlayerPrefs.SetFloat("CurrentPlayerScore", currentScore);
 
@@ -78,29 +78,29 @@ public class ScoreManager : MonoBehaviour
 
         for (int i = 0; i < 5; i++)
         {
-            // ����� �ְ������� �̸� ��������
+            // 저장된 최고점수와 이름 가져오기
             bestScores[i] = PlayerPrefs.GetFloat(i + "BestScore");
             bestName[i] = PlayerPrefs.GetString(i + "BestName");
 
-            // ���� ������ ��ŷ�� ���� �� �ִٸ�
+            // 현재 점수가 랭킹에 오를 수 있다면
             while (bestScores[i] < currentScore)
             {
-                // ���� ( ���� i���� �ӹ��� �ִ� �����͸� ���� �����ͷ� ������ �� �ڸ��� ���ο� �����͸� �ִ� �ڸ��ٲٱ� )
+                // 스왑한다 ( 현재 랭킹에 있던 점수를 빼내고 빈 자리에 현재 점수를 넣는다. 자리 바꾸기 )
                 score = bestScores[i];
                 Name = bestName[i];
                 bestScores[i] = currentScore;
                 bestName[i] = currentName;
 
-                // ��ŷ�� �ٽ� �����ϱ�
+                // 랭킹에 저장
                 PlayerPrefs.SetFloat(i + "BestScore", currentScore);
                 PlayerPrefs.SetString(i.ToString() + "BestName", currentName);
 
-                // ���� �ݺ��� ����
+                // 다음 반복을 위해서
                 currentScore = score;
                 currentName = name;
             }
         }
-        // ������������ ����
+        // 랭킹에 맞춰서 점수와 이름을 저장한다.
         Array.Sort(bestScores);
         Array.Sort(bestName);
     }
