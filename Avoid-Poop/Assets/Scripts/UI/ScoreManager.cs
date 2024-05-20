@@ -18,7 +18,7 @@ public class ScoreManager : MonoBehaviour
     private float[] bestScores = new float[5];
     private string[] bestName = new string[5];
     private float bestScore = 0f;
-    private float currentScore = 0;
+    private float currentScore;
 
     private string playerName;
 
@@ -30,13 +30,13 @@ public class ScoreManager : MonoBehaviour
 
     private void Awake()
     {
-        Ranker1.text = $"{bestName[4]} : {bestScores[4]}";
-        Ranker2.text = $"{bestName[3]} : {bestScores[3]}";
-        Ranker3.text = $"{bestName[2]} : {bestScores[2]}";
-        Ranker4.text = $"{bestName[1]} : {bestScores[1]}";
-        Ranker5.text = $"{bestName[0]} : {bestScores[0]}";
+        //Ranker1.text = $"{bestName[4]} : {bestScores[4]}";
+        //Ranker2.text = $"{bestName[3]} : {bestScores[3]}";
+        //Ranker3.text = $"{bestName[2]} : {bestScores[2]}";
+        //Ranker4.text = $"{bestName[1]} : {bestScores[1]}";
+        //Ranker5.text = $"{bestName[0]} : {bestScores[0]}";
         bestScore = PlayerPrefs.GetFloat("BestScore", 0);
-        highScoreText.text = $"HIGH : {bestScore.ToString("N2")}";
+        highScoreText.text = $"HIGH : {bestScore.ToString("N2")}"; 
 
         if (Instance == null)
         {
@@ -46,7 +46,7 @@ public class ScoreManager : MonoBehaviour
 
     void Start()
     {
-        score = 0;
+        currentScore = 0;
         Time.timeScale = 1.0f; 
     }
 
