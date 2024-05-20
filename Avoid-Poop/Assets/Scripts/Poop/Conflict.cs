@@ -8,16 +8,28 @@ public class Conflict : MonoBehaviour
     HPManager HPManager;
     public GameObject shield;
     public float destroyTime = 5f;
+    public bool isShield;
+    private Coroutine shieldCoroutine;
+    GameObject obj;
     private void OnTriggerEnter2D(Collider2D other)
     {
+        
         if (other.gameObject.tag == "Poop")
         {
+            if(isShield)
+            {
+                Debug.Log("Shield");
+            }
+            else
+            {
             Debug.Log("Ouch");
             HPManager.hp -= 1;
+            }
             if (HPManager.hp == 0)
             {
                 ScoreManager.Instance.GameOver();
             }
+            
         }
 
         if (other.gameObject.tag == "Item")
@@ -25,10 +37,20 @@ public class Conflict : MonoBehaviour
             //보호막         
             if(other.gameObject.name=="ShieldItem(Clone)")
             {   
-                // Shield 프리팹을 인스턴스화하고 위치 설정
-                GameObject obj = Instantiate(shield, transform); 
-                // 5초 후에 Shield 프리팹을 파괴
-                Destroy(obj, destroyTime);
+                if(!isShield)
+                {
+                    isShield=true;
+                    // Shield 프리팹을 인스턴스화하고 위치 설정
+                    obj = Instantiate(shield, transform);
+                } 
+                // 이미 활성화된 코루틴이 있으면 중지합니다.
+                else
+                {
+                    StopCoroutine(shieldCoroutine);
+                }
+                //코루틴 실행
+                shieldCoroutine = StartCoroutine(DisableShieldAfterTime(destroyTime));
+                                 
             }
             //체력회복 
             else if(other.gameObject.name=="Heal(Clone)")
@@ -58,5 +80,12 @@ public class Conflict : MonoBehaviour
             }
         }
     }
+    // 코루틴 사용 정해진시간이후에 값변경
+    IEnumerator DisableShieldAfterTime(float time)
+{
+    yield return new WaitForSeconds(time);
+    Destroy(obj);
+    isShield = false;
+}
 
 }
