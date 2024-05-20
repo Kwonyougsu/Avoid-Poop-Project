@@ -1693,7 +1693,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &860746921
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3393,6 +3393,8 @@ MonoBehaviour:
   Ranker4: {fileID: 0}
   Ranker5: {fileID: 0}
   nameInput: {fileID: 1927892387}
+  resetBtn: {fileID: 860746920}
+  closeBtn: {fileID: 1993814202}
 --- !u!114 &1927892387
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3559,7 +3561,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1993814203
 RectTransform:
   m_ObjectHideFlags: 0
