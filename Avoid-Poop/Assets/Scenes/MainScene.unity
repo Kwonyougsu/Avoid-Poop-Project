@@ -1218,6 +1218,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c33112ed13f7f224482f4b2644262ffd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  diffSelecet: {fileID: 0}
   SoundSetting: {fileID: 0}
   RankingPanel: {fileID: 0}
 --- !u!1 &663591034
