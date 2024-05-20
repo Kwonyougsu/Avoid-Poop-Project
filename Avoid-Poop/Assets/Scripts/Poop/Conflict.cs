@@ -55,9 +55,16 @@ public class Conflict : MonoBehaviour
             //체력회복 
             else if(other.gameObject.name=="Heal(Clone)")
             {
-                Debug.Log("Heal");
+                
                 if(HPManager.hp < 5)
+                {
+                Debug.Log("Heal");
                 HPManager.hp += 1;
+                }
+                else
+                {
+                    Debug.Log("HP max(BonusScore)");
+                }
             }
             //점수2배 아이탬
             else if(other.gameObject.name=="Fever(Clone)")
