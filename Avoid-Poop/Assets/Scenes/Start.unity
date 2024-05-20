@@ -326,7 +326,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c33112ed13f7f224482f4b2644262ffd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  diffSetting: {fileID: 0}
+  diffSelecet: {fileID: 1175020625}
   SoundSetting: {fileID: 839331575}
   RankingPanel: {fileID: 0}
 --- !u!114 &58291713
@@ -4166,9 +4166,7 @@ MonoBehaviour:
   Ranker3: {fileID: 150085175}
   Ranker4: {fileID: 1021141779}
   Ranker5: {fileID: 2090363218}
-  nowScoreTxt: {fileID: 0}
-  HighScoreText: {fileID: 0}
-  endPanel: {fileID: 0}
+  nameInput: {fileID: 0}
 --- !u!114 &1477411826
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4545,7 +4543,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c33112ed13f7f224482f4b2644262ffd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  diffSetting: {fileID: 0}
+  diffSelecet: {fileID: 0}
   SoundSetting: {fileID: 0}
   RankingPanel: {fileID: 418328971}
 --- !u!114 &1686360900
@@ -5035,7 +5033,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c33112ed13f7f224482f4b2644262ffd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  diffSetting: {fileID: 0}
+  diffSelecet: {fileID: 0}
   SoundSetting: {fileID: 0}
   RankingPanel: {fileID: 418328971}
 --- !u!1 &1818094279

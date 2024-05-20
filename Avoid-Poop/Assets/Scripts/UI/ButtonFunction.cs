@@ -10,11 +10,6 @@ public class ButtonFunction : MonoBehaviour
     public GameObject SoundSetting;
     public GameObject RankingPanel;
 
-    public void StartBtn()
-    {
-
-    }
-
     public void RankingBtn()
     {
         RankingPanel.SetActive(true);
