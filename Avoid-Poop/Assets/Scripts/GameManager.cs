@@ -11,14 +11,21 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        InvokeRepeating("MakePoop", 0f, 0.2f);
+        float interval = DiffManager.Instance.GetDifficulty();
+        SetDifficulty(interval);
         InvokeRepeating("MakeItem", 0f, 3f);
     }
+
+    public void SetDifficulty(float interval)
+    {
+        CancelInvoke("MakePoop");
+        InvokeRepeating("MakePoop", 0f, interval);
+    }
+
     private void Update()
     {
         
     }
-
     private void MakePoop()
     {
         Instantiate(Poop);

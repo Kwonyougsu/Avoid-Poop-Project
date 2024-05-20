@@ -6,13 +6,9 @@ using UnityEngine.UI;
 
 public class ButtonFunction : MonoBehaviour
 {
+    public GameObject diffSelecet;
     public GameObject SoundSetting;
     public GameObject RankingPanel;
-    public void StartBtn()
-    {
-        // 게임화면 이동 
-        SceneManager.LoadScene(1);
-    }
 
     public void RankingBtn()
     {
@@ -37,7 +33,6 @@ public class ButtonFunction : MonoBehaviour
         SoundSetting.SetActive(false);
     }
 
-
     public void CloseRankingPanel()
     {
         RankingPanel.SetActive(false);
@@ -52,6 +47,9 @@ public class ButtonFunction : MonoBehaviour
     {
         // 로비로 이동하기
         SceneManager.LoadScene(0);
-
+    }
+    public void Selectdiff()
+    {
+        diffSelecet.SetActive(true);
     }
 }
