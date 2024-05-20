@@ -3543,19 +3543,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1477411822}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a5bacb848ae58f4aa9b0bbcfd6f444e, type: 3}
+  m_Script: {fileID: 11500000, guid: a4a033bc77783ea4e8556536c94e1836, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentScoreTxt: {fileID: 0}
-  highScoreText: {fileID: 0}
   Ranker1: {fileID: 730485468}
   Ranker2: {fileID: 924075694}
   Ranker3: {fileID: 150085175}
   Ranker4: {fileID: 1021141779}
   Ranker5: {fileID: 2090363218}
-  nowScoreTxt: {fileID: 0}
-  HighScoreText: {fileID: 0}
-  endPanel: {fileID: 0}
 --- !u!1 &1547718123
 GameObject:
   m_ObjectHideFlags: 0
