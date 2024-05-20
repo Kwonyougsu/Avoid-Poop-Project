@@ -7,10 +7,16 @@ using UnityEngine.UI;
 public class ButtonFunction : MonoBehaviour
 {
     public GameObject SoundSetting;
+    public GameObject RankingPanel;
     public void StartBtn()
     {
-    
+        // ê²Œì„í™”ë©´ ì´ë™ 
         SceneManager.LoadScene(1);
+    }
+
+    public void RankingBtn()
+    {
+        RankingPanel.SetActive(true);
     }
     public void Soundsetting()
     {
@@ -19,7 +25,7 @@ public class ButtonFunction : MonoBehaviour
 
     public void AudioOnToggle()
     {
-        //»ç¿îµå Á¶Àı
+        // ì‚¬ìš´ë“œ ì¡°ì ˆ
         AudioListener.volume = 1.0f;
     }
     public void AudioOffToggle()
@@ -30,16 +36,22 @@ public class ButtonFunction : MonoBehaviour
     {
         SoundSetting.SetActive(false);
     }
+
+
+    public void CloseRankingPanel()
+    {
+        RankingPanel.SetActive(false);
+    }
     public void Retry()
     {
-        //°ÔÀÓ ´Ù½ÃÇÏ±â
-        Time.timeScale = 1.0f;
+        // ê²Œì„ ë‹¤ì‹œí•˜ê¸°
         SceneManager.LoadScene(1);
         
     }
     public void back()
     {
-        //·Îºñ·Î ÀÌµ¿ÇÏ±â
+        // ë¡œë¹„ë¡œ ì´ë™í•˜ê¸°
         SceneManager.LoadScene(0);
+
     }
 }
