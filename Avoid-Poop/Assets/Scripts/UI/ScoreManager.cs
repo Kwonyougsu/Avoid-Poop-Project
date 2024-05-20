@@ -23,7 +23,6 @@ public class ScoreManager : MonoBehaviour
         Time.timeScale = 1f; 
     }
 
-    // Update is called once per frame
     void Update()
     {
         Score();

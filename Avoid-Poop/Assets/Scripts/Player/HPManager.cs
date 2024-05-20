@@ -20,7 +20,6 @@ public class HPManager : MonoBehaviour
             
     }
 
-    // Update is called once per frame
     void Update()
     {
         switch (hp)

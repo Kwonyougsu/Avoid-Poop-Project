@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Poop : MonoBehaviour
 {
-    // Start is called before the first frame update
     void Start()
     {
         float x = Random.Range(-8f, 8f);

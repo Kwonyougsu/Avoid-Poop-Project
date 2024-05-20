@@ -10,7 +10,8 @@ public class TopDownController
     
     public void CallMoveEvent(Vector2 direction)
     {
-        OnMoveEvent?.Invoke(direction);//?.없으면 말고 있으면 실행
+        //?.없으면 말고 있으면 실행
+        OnMoveEvent?.Invoke(direction);
     }
     public void CallLookEvent(Vector2 direction)
     {

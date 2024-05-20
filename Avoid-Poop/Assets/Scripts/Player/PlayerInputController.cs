@@ -7,7 +7,8 @@ public class PlayerInputController : TopDownController
     private Camera camera;
     private void Awake()
     {
-        camera = Camera.main; //mainCamera태그의 카메라를 가져옴
+        //mainCamera태그의 카메라를 가져옴
+        camera = Camera.main; 
     }
     public void OnMove(InputValue value)
     {
