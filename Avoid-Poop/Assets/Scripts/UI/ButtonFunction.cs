@@ -10,7 +10,7 @@ public class ButtonFunction : MonoBehaviour
     public GameObject RankingPanel;
     public void StartBtn()
     {
-        //���� ������ �̵� 
+        // 게임화면 이동 
         SceneManager.LoadScene(1);
     }
 
@@ -25,7 +25,7 @@ public class ButtonFunction : MonoBehaviour
 
     public void AudioOnToggle()
     {
-        //���� ����
+        // 사운드 조절
         AudioListener.volume = 1.0f;
     }
     public void AudioOffToggle()
@@ -41,15 +41,15 @@ public class ButtonFunction : MonoBehaviour
     public void CloseRankingPanel()
     {
         RankingPanel.SetActive(false);
-
+    }
     public void Retry()
     {
-        //���� �ٽ��ϱ�
+        // 게임 다시하기
         SceneManager.LoadScene(1);
     }
     public void back()
     {
-        //�κ�� �̵��ϱ�
+        // 로비로 이동하기
         SceneManager.LoadScene(0);
 
     }

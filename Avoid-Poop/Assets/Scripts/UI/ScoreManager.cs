@@ -19,7 +19,8 @@ public class ScoreManager : MonoBehaviour
     private string[] bestName = new string[5];
     private float bestScore = 0f;
     private float currentScore = 0;
-    
+
+    private string playerName;
 
     [SerializeField] TMP_Text nowScoreTxt;
     [SerializeField] TMP_Text HighScoreText;
@@ -51,6 +52,7 @@ public class ScoreManager : MonoBehaviour
     void Update()
     {
         Score();
+        RankingSet(currentScore, playerName);
     }
 
     public void Score()
@@ -101,10 +103,10 @@ public class ScoreManager : MonoBehaviour
         // ������������ ����
         Array.Sort(bestScores);
         Array.Sort(bestName);
-
+    }
     public void GameOver()
     {
-        nowScoreTxt.text = $"{score.ToString("N2")}";
+        nowScoreTxt.text = $"{currentScore.ToString("N2")}";
         HighScoreText.text = $"{bestScore.ToString("N2")}";
         endPanel.SetActive(true);
     }
