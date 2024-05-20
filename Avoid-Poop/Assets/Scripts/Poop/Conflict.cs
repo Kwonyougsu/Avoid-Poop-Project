@@ -16,7 +16,7 @@ public class Conflict : MonoBehaviour
             HPManager.hp -= 1;
             if (HPManager.hp == 0)
             {
-                GameManager.Instance.GameOver();
+                ScoreManager.Instance.GameOver();
             }
         }
 

@@ -15,14 +15,6 @@ public class GameManager : MonoBehaviour
         InvokeRepeating("MakeItem", 0f, 3f);
     }
 
-    void Awake()
-    {
-        if (Instance == null)
-        {
-            Instance = this;
-        }
-    }
-
     private void MakePoop()
     {
         Instantiate(Poop);
