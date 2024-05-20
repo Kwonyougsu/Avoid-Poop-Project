@@ -9,7 +9,7 @@ public class ButtonFunction : MonoBehaviour
     public GameObject SoundSetting;
     public void StartBtn()
     {
-        //메인 씬으로 이동 
+    
         SceneManager.LoadScene(1);
     }
     public void Soundsetting()
@@ -33,7 +33,9 @@ public class ButtonFunction : MonoBehaviour
     public void Retry()
     {
         //게임 다시하기
+        Time.timeScale = 1.0f;
         SceneManager.LoadScene(1);
+        
     }
     public void back()
     {

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class ScoreManager : MonoBehaviour
 {
@@ -14,7 +15,7 @@ public class ScoreManager : MonoBehaviour
     public static ScoreManager Instance;
     public GameObject endPanel;
 
-    private float score = 0;
+    private float score;
     private float bestScore = 0;
     private string key = "BestScore";
 
@@ -31,7 +32,8 @@ public class ScoreManager : MonoBehaviour
 
     void Start()
     {
-        Time.timeScale = 1f; 
+        score = 0;
+        Time.timeScale = 1.0f; 
     }
 
     void Update()
@@ -41,7 +43,8 @@ public class ScoreManager : MonoBehaviour
 
     public void Score()
     {
-        score = Time.time;
+        //time.time은 잘 안씀 재로딩의 경우 
+        score += Time.deltaTime;
         currentScoreTxt.text = $"Score : {score.ToString("N2")}";
 
         if (score > bestScore)

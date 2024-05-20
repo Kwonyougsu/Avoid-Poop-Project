@@ -7,7 +7,8 @@ public class HPManager : MonoBehaviour
 {
     private Image img;
 
-    public static int hp = 5;
+    public static int hp;
+    // 스태틱을 사용하면 -> 메모리에 자리를 차지하고있어서 초기화를 시켜줘야한다. (씬로드를 해도)
 
     public GameObject heart1;
     public GameObject heart2;
@@ -17,7 +18,8 @@ public class HPManager : MonoBehaviour
 
     void Start()
     {
-            
+        hp = 5;
+        Time.timeScale = 1.0f;
     }
 
     void Update()
