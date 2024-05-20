@@ -7,10 +7,16 @@ using UnityEngine.UI;
 public class ButtonFunction : MonoBehaviour
 {
     public GameObject SoundSetting;
+    public GameObject RankingPanel;
     public void StartBtn()
     {
         //메인 씬으로 이동 
         SceneManager.LoadScene(1);
+    }
+
+    public void RankingBtn()
+    {
+        RankingPanel.SetActive(true);
     }
     public void Soundsetting()
     {
@@ -29,5 +35,10 @@ public class ButtonFunction : MonoBehaviour
     public void Close()
     {
         SoundSetting.SetActive(false);
+    }
+
+    public void CloseRankingPanel()
+    {
+        RankingPanel.SetActive(false);
     }
 }
