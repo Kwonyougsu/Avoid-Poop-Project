@@ -38,7 +38,7 @@ public class RankingManager : MonoBehaviour
     // 현재 플레이어의 점수와 이름을 받아서 실행됨
     private void RankingSet(float currentScore, string currentName)
     {
-        Debug.Log("123123");
+        //Debug.Log("123123");
         // 현재에 저장하고 시작
         PlayerPrefs.SetString("CurrentPlayerName", currentName);
         PlayerPrefs.SetFloat("CurrentPlayerScore", currentScore);
