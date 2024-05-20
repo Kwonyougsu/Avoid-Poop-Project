@@ -30,4 +30,14 @@ public class ButtonFunction : MonoBehaviour
     {
         SoundSetting.SetActive(false);
     }
+    public void Retry()
+    {
+        //게임 다시하기
+        SceneManager.LoadScene(1);
+    }
+    public void back()
+    {
+        //로비로 이동하기
+        SceneManager.LoadScene(0);
+    }
 }
