@@ -13,18 +13,14 @@ public class Poop : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D other)
-    {
-        if(other.gameObject.tag == "Poop")
+    {        
+        if(other.gameObject.tag == "Poop" || other.gameObject.tag == "Item" )
         {
-
-        }
+            // 충돌 무시, 아무것도 하지 않음
+        }        
         else
         {
              Destroy(this.gameObject);
-        }
+        } 
     }
-
-
-
-
 }

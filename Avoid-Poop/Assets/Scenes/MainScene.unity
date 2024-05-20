@@ -2043,6 +2043,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d95fb35038d466e458801670a099006b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shield: {fileID: 5192848608063233837, guid: 95d0d78a37f8bb54bb4bba741e67f8ca, type: 3}
+  destroyTime: 5
+  isShield: 0
 --- !u!1 &1406507974
 GameObject:
   m_ObjectHideFlags: 0
@@ -2690,6 +2693,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Poop: {fileID: 7775089772548589212, guid: 8847ca550ffe98145acb9b33ba5af6d3, type: 3}
+  Item:
+  - {fileID: 5097781410767387847, guid: eaf727da6b5817a44a28c4bad7e0802f, type: 3}
+  endPanel: {fileID: 845732741}
 --- !u!4 &1792592616
 Transform:
   m_ObjectHideFlags: 0
