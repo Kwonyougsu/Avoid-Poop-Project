@@ -36,7 +36,7 @@ public class ScoreManager : MonoBehaviour
         //Ranker4.text = $"{bestName[1]} : {bestScores[1]}";
         //Ranker5.text = $"{bestName[0]} : {bestScores[0]}";
         bestScore = PlayerPrefs.GetFloat("BestScore", 0);
-        highScoreText.text = $"HIGH : {bestScore.ToString("N2")}"; 
+        //highScoreText.text = $"HIGH : {bestScore.ToString("N2")}"; 
 
         if (Instance == null)
         {
@@ -52,7 +52,7 @@ public class ScoreManager : MonoBehaviour
 
     void Update()
     {
-        Score();
+        //Score();
         RankingSet(currentScore, playerName);
     }
 
@@ -60,7 +60,7 @@ public class ScoreManager : MonoBehaviour
     {
         // time.time은 되도록 사용하지 않고 Time.deltaTime 로 사용한다 
         currentScore += Time.deltaTime;
-        currentScoreTxt.text = $"Score : {currentScore.ToString("N2")}";
+        //currentScoreTxt.text = $"Score : {currentScore.ToString("N2")}";
 
         if (currentScore > bestScore)
         {

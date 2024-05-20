@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,13 +9,20 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        InvokeRepeating("MakePoop", 0f, 0.1f);
+        float interval = DiffManager.Instance.GetDifficulty();
+        SetDifficulty(interval);
     }
+
+    public void SetDifficulty(float interval)
+    {
+        CancelInvoke("MakePoop");
+        InvokeRepeating("MakePoop", 0f, interval);
+    }
+
     private void Update()
     {
         
     }
-
     private void MakePoop()
     {
         Instantiate(Poop);
