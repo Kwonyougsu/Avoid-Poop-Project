@@ -214,6 +214,7 @@ GameObject:
   - component: {fileID: 58291712}
   - component: {fileID: 58291713}
   - component: {fileID: 58291714}
+  - component: {fileID: 58291715}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -359,6 +360,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioMixer: {fileID: 24100000, guid: 319392240d459524389f92e836680de5, type: 2}
   audioSlider: {fileID: 735919073}
+--- !u!114 &58291715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 58291707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 699aa358dd370e040bcd80f365073ab8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &103618450
 GameObject:
   m_ObjectHideFlags: 0
@@ -1110,7 +1123,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1477411826}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: DiffManager, Assembly-CSharp
         m_MethodName: SetDifficulty
         m_Mode: 4
@@ -1118,7 +1131,7 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
-          m_FloatArgument: 1
+          m_FloatArgument: 0.5
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -3049,19 +3062,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1293287816}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1477411826}
-        m_TargetAssemblyTypeName: DiffManager, Assembly-CSharp
-        m_MethodName: SetDifficulty
-        m_Mode: 4
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0.2
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1293287816
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4161,12 +4162,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4a033bc77783ea4e8556536c94e1836, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreManager: {fileID: 0}
   Ranker1: {fileID: 730485468}
   Ranker2: {fileID: 924075694}
   Ranker3: {fileID: 150085175}
   Ranker4: {fileID: 1021141779}
   Ranker5: {fileID: 2090363218}
   nameInput: {fileID: 0}
+  resetBtn: {fileID: 0}
+  closeBtn: {fileID: 0}
 --- !u!114 &1477411826
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5582,15 +5586,15 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1477411826}
-        m_TargetAssemblyTypeName: DiffManager, Assembly-CSharp
+      - m_Target: {fileID: 58291715}
+        m_TargetAssemblyTypeName: Diff, Assembly-CSharp
         m_MethodName: SetDifficulty
         m_Mode: 4
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
-          m_FloatArgument: 0.5
+          m_FloatArgument: 0.1
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
