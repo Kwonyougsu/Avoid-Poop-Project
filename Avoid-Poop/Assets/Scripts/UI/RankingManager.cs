@@ -26,11 +26,11 @@ public class RankingManager : MonoBehaviour
 
     private void Start()
     {
-        Ranker1.text = $"{rankName[0]} : {rankScore[0]}";
-        Ranker2.text = $"{rankName[1]} : {rankScore[1]}";
-        Ranker3.text = $"{rankName[2]} : {rankScore[2]}";
-        Ranker4.text = $"{rankName[3]} : {rankScore[3]}";
-        Ranker5.text = $"{rankName[4]} : {rankScore[4]}";
+        //Ranker1.text = $"{rankName[0]} : {rankScore[0]}";
+        //Ranker2.text = $"{rankName[1]} : {rankScore[1]}";
+        //Ranker3.text = $"{rankName[2]} : {rankScore[2]}";
+        //Ranker4.text = $"{rankName[3]} : {rankScore[3]}";
+        //Ranker5.text = $"{rankName[4]} : {rankScore[4]}";
     }
 
        
@@ -83,6 +83,8 @@ public class RankingManager : MonoBehaviour
             rankScore[i] = PlayerPrefs.GetFloat(i.ToString() + "BestScore");
             rankName[i] = PlayerPrefs.GetString(i.ToString() + "BestName");
         }
+        Debug.Log($"랭크{rankName[0]}");
+        Debug.Log($"랭크{rankScore[0]}");
     }
 
     public void PlayerNameSet()

@@ -821,17 +821,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7858188302395094570, guid: 32bd3882f1f461a4fbf139fd481c0c73, type: 3}
   m_PrefabInstance: {fileID: 150085173}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &150085175 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 9017813907053852271, guid: 32bd3882f1f461a4fbf139fd481c0c73, type: 3}
-  m_PrefabInstance: {fileID: 150085173}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &153553994
 GameObject:
   m_ObjectHideFlags: 0
@@ -1123,8 +1112,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: DiffManager, Assembly-CSharp
+      - m_Target: {fileID: 58291715}
+        m_TargetAssemblyTypeName: Diff, Assembly-CSharp
         m_MethodName: SetDifficulty
         m_Mode: 4
         m_Arguments:
@@ -1756,6 +1745,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ranker
       objectReference: {fileID: 0}
+    - target: {fileID: 6054340705620331927, guid: 32bd3882f1f461a4fbf139fd481c0c73, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7704970288498484387, guid: 32bd3882f1f461a4fbf139fd481c0c73, type: 3}
       propertyPath: m_Name
       value: Ranker1Txt
@@ -1850,17 +1843,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7858188302395094570, guid: 32bd3882f1f461a4fbf139fd481c0c73, type: 3}
   m_PrefabInstance: {fileID: 730485466}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &730485468 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 9017813907053852271, guid: 32bd3882f1f461a4fbf139fd481c0c73, type: 3}
-  m_PrefabInstance: {fileID: 730485466}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &735919071
 GameObject:
   m_ObjectHideFlags: 0
@@ -2492,17 +2474,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7858188302395094570, guid: 32bd3882f1f461a4fbf139fd481c0c73, type: 3}
   m_PrefabInstance: {fileID: 924075692}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &924075694 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 9017813907053852271, guid: 32bd3882f1f461a4fbf139fd481c0c73, type: 3}
-  m_PrefabInstance: {fileID: 924075692}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &926902927
 GameObject:
   m_ObjectHideFlags: 0
@@ -2816,17 +2787,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7858188302395094570, guid: 32bd3882f1f461a4fbf139fd481c0c73, type: 3}
   m_PrefabInstance: {fileID: 1021141777}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1021141779 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 9017813907053852271, guid: 32bd3882f1f461a4fbf139fd481c0c73, type: 3}
-  m_PrefabInstance: {fileID: 1021141777}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1122218191
 GameObject:
   m_ObjectHideFlags: 0
@@ -3062,7 +3022,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1293287816}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 58291715}
+        m_TargetAssemblyTypeName: Diff, Assembly-CSharp
+        m_MethodName: SetDifficulty
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0.2
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1293287816
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4163,11 +4135,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreManager: {fileID: 0}
-  Ranker1: {fileID: 730485468}
-  Ranker2: {fileID: 924075694}
-  Ranker3: {fileID: 150085175}
-  Ranker4: {fileID: 1021141779}
-  Ranker5: {fileID: 2090363218}
+  Ranker1: {fileID: 0}
+  Ranker2: {fileID: 0}
+  Ranker3: {fileID: 0}
+  Ranker4: {fileID: 0}
+  Ranker5: {fileID: 0}
   nameInput: {fileID: 0}
   resetBtn: {fileID: 0}
   closeBtn: {fileID: 0}
@@ -5737,17 +5709,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 32bd3882f1f461a4fbf139fd481c0c73, type: 3}
---- !u!114 &2090363218 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 9017813907053852271, guid: 32bd3882f1f461a4fbf139fd481c0c73, type: 3}
-  m_PrefabInstance: {fileID: 2090363217}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!224 &2090363219 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7858188302395094570, guid: 32bd3882f1f461a4fbf139fd481c0c73, type: 3}

@@ -4,19 +4,23 @@ using UnityEngine;
 
 public class BGMManager : MonoBehaviour
 {
-    private static BGMManager instance = null;
+    public static BGMManager Instance;
 
     void Awake()
     {
-        if (instance == null)
+        if (Instance == null)
         {
-            instance = this;
+            Instance = this;
             DontDestroyOnLoad(gameObject);
             GetComponent<AudioSource>().Play();
         }
         else
         {
-            Destroy(gameObject);
+            OnDestroy();
         }
+    }
+    public void OnDestroy()
+    {
+        Destroy(gameObject);
     }
 }
