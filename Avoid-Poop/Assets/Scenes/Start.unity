@@ -1113,8 +1113,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 58291715}
-        m_TargetAssemblyTypeName: Diff, Assembly-CSharp
+      - m_Target: {fileID: 58291713}
+        m_TargetAssemblyTypeName: UIController, Assembly-CSharp
         m_MethodName: SetDifficulty
         m_Mode: 4
         m_Arguments:
@@ -3024,8 +3024,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 58291715}
-        m_TargetAssemblyTypeName: Diff, Assembly-CSharp
+      - m_Target: {fileID: 58291713}
+        m_TargetAssemblyTypeName: UIController, Assembly-CSharp
         m_MethodName: SetDifficulty
         m_Mode: 4
         m_Arguments:
@@ -4058,7 +4058,6 @@ GameObject:
   - component: {fileID: 1477411824}
   - component: {fileID: 1477411823}
   - component: {fileID: 1477411825}
-  - component: {fileID: 1477411826}
   m_Layer: 0
   m_Name: DataManager
   m_TagString: Untagged
@@ -4080,6 +4079,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   userName: 
   charNum: 0
+  diff: 0
 --- !u!4 &1477411824
 Transform:
   m_ObjectHideFlags: 0
@@ -4116,18 +4116,6 @@ MonoBehaviour:
   nameInput: {fileID: 0}
   resetBtn: {fileID: 0}
   closeBtn: {fileID: 0}
---- !u!114 &1477411826
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1477411822}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e46e2bb098910bb4896aeefe50c44b23, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1547718123
 GameObject:
   m_ObjectHideFlags: 0
@@ -5533,8 +5521,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 58291715}
-        m_TargetAssemblyTypeName: Diff, Assembly-CSharp
+      - m_Target: {fileID: 58291713}
+        m_TargetAssemblyTypeName: UIController, Assembly-CSharp
         m_MethodName: SetDifficulty
         m_Mode: 4
         m_Arguments:

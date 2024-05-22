@@ -11,9 +11,10 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        float interval = DiffManager.Instance.GetDifficulty();
+        float interval = DataManger.instance.diff;
         SetDifficulty(interval);
         InvokeRepeating("MakeItem", 0f, 3f);
+        Debug.Log(interval); //값넘긴거 확인용 
     }
 
     public void SetDifficulty(float interval)
