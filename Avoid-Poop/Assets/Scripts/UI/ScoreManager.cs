@@ -19,6 +19,7 @@ public class ScoreManager : MonoBehaviour
     public GameObject endPanel;
     public GameObject PasuePanel;
 
+    public float interval;
 
     private void Awake()
     {
@@ -29,12 +30,14 @@ public class ScoreManager : MonoBehaviour
         {
             Instance = this;
         }
+        interval = DataManger.instance.diff;
     }
 
     void Start()
     {
         currentScore = 0;
         Time.timeScale = 1.0f; 
+
     }
 
     void Update()
@@ -44,6 +47,21 @@ public class ScoreManager : MonoBehaviour
 
     public void Score()
     {
+        //이지 1배 intervar 0.2 , 노말 1.5배 0.1 , 하드 2배  0.07
+        switch (interval)
+        {
+            case 0.2f:
+                currentScore += Time.deltaTime;
+                break;
+            case 0.1f:
+                currentScore += (Time.deltaTime)*1.5f;
+                break;
+            case 0.07f:
+                currentScore += (Time.deltaTime)*2;
+                break;
+            default:
+                break;
+        }
         // time.time은 되도록 사용하지 않고 Time.deltaTime 로 사용한다 
         currentScore += Time.deltaTime;
         currentScoreTxt.text = $"Score : {currentScore.ToString("N2")}";
