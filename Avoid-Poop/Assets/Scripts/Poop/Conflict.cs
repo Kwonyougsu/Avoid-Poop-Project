@@ -45,7 +45,10 @@ public class Conflict : MonoBehaviour
 
             if (HPManager.hp == 0)
             {
-                ScoreManager.Instance.GameOver();                
+                ScoreManager.Instance.GameOver(); 
+                GameObject[] poopObjects = GameObject.FindGameObjectsWithTag("Poop");                
+                foreach (GameObject poop in poopObjects)                
+                    Destroy(poop);                
             }
             
         }
