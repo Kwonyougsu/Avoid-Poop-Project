@@ -5,7 +5,6 @@ using UnityEngine;
 public class DataManger : MonoBehaviour
 {
     public static DataManger instance;
-    public string userName;
     public int charNum;
     public float diff;
     
