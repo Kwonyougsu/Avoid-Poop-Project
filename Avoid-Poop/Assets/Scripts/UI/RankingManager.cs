@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class RankingManager : MonoBehaviour
 {
-    public ScoreManager scoreManager;
+    private ScoreManager scoreManager;
 
     [SerializeField] TMP_Text Ranker1;
     [SerializeField] TMP_Text Ranker2;
@@ -38,6 +38,7 @@ public class RankingManager : MonoBehaviour
             bestName[i] = PlayerPrefs.GetString(i.ToString() + "BestName");
         }
         UpdateRankText();
+        RankingSet(0, "Unknown");
     }
 
     private void UpdateRankText()
@@ -57,24 +58,31 @@ public class RankingManager : MonoBehaviour
 
     private void RankingSet(float currentScore, string currentName)
     {
-        for (int i = 0; i < 5; i++)
+        // 1위부터 아래로 검사를 하고 만약에 더 높은 점수가 나오면 반복문 돌리면서 1번에서 찾았다고 하면 아래서부터 땡기기
+        // 현재 점수가 5위 점수보다 높을 시
+        if (currentScore > bestScores[4])
         {
-            if (currentScore > bestScores[i])
+            // 5위를 현재 점수로 바꾼다
+            bestScores[4] = currentScore;
+            for(int i = 4; i > 0 ; i--)
             {
-                // 점수와 이름을 스왑
-                float tempScore = bestScores[i];
-                string tempName = bestName[i];
-                bestScores[i] = currentScore;
-                bestName[i] = currentName;
-                currentScore = tempScore;
-                currentName = tempName;
+                if (bestScores[i] > bestScores[i - 1]) 
+                {
+                    bestScores[i - 1] = bestScores[i];
+                }
+            }
+            if(currentScore < bestScores[0])
+            {
+                bestScores[0] = currentScore;
             }
         }
+
+
         // PlayerPrefs에 저장
-        for (int i = 0; i < 5; i++)
+        for (int j = 0; j < 5; j++)
         {
-            PlayerPrefs.SetFloat(i.ToString() + "BestScore", bestScores[i]);
-            PlayerPrefs.SetString(i.ToString() + "BestName", bestName[i]);
+            PlayerPrefs.SetFloat(j.ToString() + "BestScore", bestScores[j]);
+            PlayerPrefs.SetString(j.ToString() + "BestName", bestName[j]);
         }
 
         UpdateRankText();
