@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class RankingManager : MonoBehaviour
 {
-    ScoreManager scoreManager;
+    public ScoreManager scoreManager;
 
     [SerializeField] TMP_Text Ranker1;
     [SerializeField] TMP_Text Ranker2;
@@ -26,12 +26,11 @@ public class RankingManager : MonoBehaviour
 
     private void Start()
     {
-        Ranker1.text = $"{rankName[0]} : {rankScore[0]}";
-        Ranker2.text = $"{rankName[1]} : {rankScore[1]}";
-        Ranker3.text = $"{rankName[2]} : {rankScore[2]}";
-        Ranker4.text = $"{rankName[3]} : {rankScore[3]}";
-        Ranker5.text = $"{rankName[4]} : {rankScore[4]}";
-        nowScore = scoreManager.currentScore;
+        //Ranker1.text = $"{rankName[0]} : {rankScore[0]}";
+        //Ranker2.text = $"{rankName[1]} : {rankScore[1]}";
+        //Ranker3.text = $"{rankName[2]} : {rankScore[2]}";
+        //Ranker4.text = $"{rankName[3]} : {rankScore[3]}";
+        //Ranker5.text = $"{rankName[4]} : {rankScore[4]}";
     }
 
        
@@ -39,11 +38,7 @@ public class RankingManager : MonoBehaviour
     // 현재 플레이어의 점수와 이름을 받아서 실행됨
     private void RankingSet(float currentScore, string currentName)
     {
-
-
         int j = 0;
-
-        Debug.Log("123123");
 
         // 현재에 저장하고 시작
         PlayerPrefs.SetString(j.ToString() + "BestName", currentName);
@@ -88,7 +83,8 @@ public class RankingManager : MonoBehaviour
             rankScore[i] = PlayerPrefs.GetFloat(i.ToString() + "BestScore");
             rankName[i] = PlayerPrefs.GetString(i.ToString() + "BestName");
         }
-
+        Debug.Log($"랭크{rankName[0]}");
+        Debug.Log($"랭크{rankScore[0]}");
     }
 
     public void PlayerNameSet()
@@ -97,7 +93,16 @@ public class RankingManager : MonoBehaviour
         playerName = nameInput.text;
         resetBtn.SetActive(true);
         closeBtn.SetActive(true);
-        
+
+        scoreManager = ScoreManager.Instance;
+
+        if (scoreManager == null)
+        {
+            return;
+        }
+
+        nowScore = scoreManager.currentScore;
+        Debug.Log(nowScore);
         RankingSet(nowScore, playerName);
     }
 }
