@@ -63,7 +63,6 @@ public class ScoreManager : MonoBehaviour
                 break;
         }
         // time.time은 되도록 사용하지 않고 Time.deltaTime 로 사용한다 
-        currentScore += Time.deltaTime;
         currentScoreTxt.text = $"Score : {currentScore.ToString("N2")}";
 
         if (currentScore > bestScore)
