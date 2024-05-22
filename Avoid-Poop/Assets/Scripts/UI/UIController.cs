@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class UIController : MonoBehaviour
@@ -14,4 +15,9 @@ public class UIController : MonoBehaviour
         choisedimg.sprite=characters[num];
         DataManger.instance.charNum=num;
     }
+    public void SetDifficulty(float interval)
+    {
+        DataManger.instance.diff = interval;
+        SceneManager.LoadScene("MainScene");
+    }    
 }

@@ -15,8 +15,7 @@ public class HPManager : MonoBehaviour
 
     void Start()
     {
-        hp = 5;
-        Time.timeScale = 1.0f;
+        hp = 5;        
     }
 
     void Update()
@@ -42,8 +41,7 @@ public class HPManager : MonoBehaviour
                 heart2.SetActive(false);
                 break;
             case 0:
-                heart1.SetActive(false);
-                Time.timeScale = 0f;
+                heart1.SetActive(false);                
                 break;
         }
     }

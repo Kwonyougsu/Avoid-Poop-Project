@@ -27,8 +27,7 @@ public class Conflict : MonoBehaviour
             }
             if (HPManager.hp == 0)
             {
-                ScoreManager.Instance.GameOver();
-                BGMManager.Instance.OnDestroy();
+                ScoreManager.Instance.GameOver();                
             }
             
         }
@@ -90,10 +89,10 @@ public class Conflict : MonoBehaviour
     }
     // 코루틴 사용 정해진시간이후에 값변경
     IEnumerator DisableShieldAfterTime(float time)
-{
-    yield return new WaitForSeconds(time);
-    Destroy(obj);
-    isShield = false;
-}
+    {
+        yield return new WaitForSeconds(time);
+        Destroy(obj);
+        isShield = false;
+    }
 
 }

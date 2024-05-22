@@ -7,6 +7,7 @@ public class DataManger : MonoBehaviour
     public static DataManger instance;
     public string userName;
     public int charNum;
+    public float diff;
     
     //DataManager.instance.userName = 으로 값받아옴
     private void Awake() 
@@ -17,5 +18,5 @@ public class DataManger : MonoBehaviour
             instance = this;
             DontDestroyOnLoad(this.gameObject);
         }
-    }
+    }    
 }
