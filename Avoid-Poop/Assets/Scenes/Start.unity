@@ -4718,6 +4718,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RankingPanel
       objectReference: {fileID: 0}
+    - target: {fileID: 8333641524177866358, guid: 1e6ac1b9285715645aa31f1383dfe545, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
