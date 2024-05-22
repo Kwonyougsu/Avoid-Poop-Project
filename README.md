@@ -30,6 +30,7 @@ with.말이없조
 # 🔧와이어 프레임 틀 과정
 <img src="https://github.com/Kwonyougsu/Avoid-Poop-Project/assets/167047369/15507f16-7a36-4cf5-a12e-b35125d609d8" width="200" height="200"/>
 <img src="https://github.com/Kwonyougsu/Avoid-Poop-Project/assets/167047369/97d4ffa8-eed3-482b-aa8b-603dda5087b2" width="200" height="200"/>
+
 ### 기획 단계에서 작성한 와이어 프레임 입니다!
 
 
