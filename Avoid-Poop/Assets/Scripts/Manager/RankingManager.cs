@@ -109,9 +109,7 @@ public class RankingManager : MonoBehaviour
             return;
         }
 
-        nowScore = scoreManager.currentScore;
-        Debug.Log(nowScore);
-        Debug.Log(playerName);
+        nowScore = scoreManager.currentScore;        
         RankingSet(nowScore, playerName);
         
     }
