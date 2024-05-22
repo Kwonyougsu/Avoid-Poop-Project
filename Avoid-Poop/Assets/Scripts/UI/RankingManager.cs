@@ -26,6 +26,7 @@ public class RankingManager : MonoBehaviour
     private void Start()
     {
         // 초기 값이 없으면 기본 값 설정
+
         for (int i = 0; i < 5; i++)
         {
             if (!PlayerPrefs.HasKey(i.ToString() + "BestScore"))
@@ -69,7 +70,6 @@ public class RankingManager : MonoBehaviour
                 currentName = tempName;
             }
         }
-
         // PlayerPrefs에 저장
         for (int i = 0; i < 5; i++)
         {

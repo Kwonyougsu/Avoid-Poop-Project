@@ -9,6 +9,7 @@ public class ButtonFunction : MonoBehaviour
     public GameObject diffSelecet;
     public GameObject SoundSetting;
     public GameObject RankingPanel;
+    public GameObject StopPanel; 
 
     public void RankingBtn()
     {
@@ -51,5 +52,15 @@ public class ButtonFunction : MonoBehaviour
     public void Selectdiff()
     {
         diffSelecet.SetActive(true);
+    }
+
+    public void Pasue()
+    {
+        StopPanel.SetActive(true);
+    }
+
+    public void ClosePasue()
+    {
+        StopPanel.SetActive(false);
     }
 }

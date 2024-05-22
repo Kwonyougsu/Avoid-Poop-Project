@@ -28,6 +28,7 @@ public class Conflict : MonoBehaviour
             if (HPManager.hp == 0)
             {
                 ScoreManager.Instance.GameOver();
+                BGMManager.Instance.OnDestroy();
             }
             
         }
