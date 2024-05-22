@@ -58,7 +58,10 @@ public class RankingManager : MonoBehaviour
     private void RankingSet(float currentScore, string currentName)
     {
         // 1위부터 아래로 검사를 하고 만약에 더 높은 점수가 나오면 반복문 돌리면서 1번에서 찾았다고 하면 아래서부터 땡기기
+        // 5위부터 위로 변경
         // 현재 점수가 5위 점수보다 높을 시
+        float tempScore;
+
         if (currentScore > bestScores[4])
         {
             // 5위를 현재 점수로 바꾼다
@@ -105,5 +108,6 @@ public class RankingManager : MonoBehaviour
         Debug.Log(nowScore);
         Debug.Log(playerName);
         RankingSet(nowScore, playerName);
+        
     }
 }
