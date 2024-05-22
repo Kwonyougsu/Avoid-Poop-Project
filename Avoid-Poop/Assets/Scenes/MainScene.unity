@@ -3655,7 +3655,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 6
 --- !u!61 &1391037505
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5048,7 +5048,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Poop: {fileID: 7775089772548589212, guid: 8847ca550ffe98145acb9b33ba5af6d3, type: 3}
   Item:
-  - {fileID: 3445804234927964145, guid: 378e1e2907cb430449261691daddebda, type: 3}
+  - {fileID: 5097781410767387847, guid: eaf727da6b5817a44a28c4bad7e0802f, type: 3}
   endPanel: {fileID: 845732741}
 --- !u!4 &1792592616
 Transform:

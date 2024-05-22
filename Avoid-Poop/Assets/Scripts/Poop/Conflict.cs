@@ -78,7 +78,6 @@ public class Conflict : MonoBehaviour
                 Debug.Log("Clear");
                 // "Poop" 태그를 가진 모든 게임 오브젝트를 찾아 배열로 저장           
                 GameObject[] poopObjects = GameObject.FindGameObjectsWithTag("Poop");
-
                 // 배열에 저장된 각 게임 오브젝트를 제거
                 foreach (GameObject poop in poopObjects)
                 {
@@ -90,9 +89,25 @@ public class Conflict : MonoBehaviour
     // 코루틴 사용 정해진시간이후에 값변경
     IEnumerator DisableShieldAfterTime(float time)
     {
-        yield return new WaitForSeconds(time);
+        float flashTime = 2.0f;
+        yield return new WaitForSeconds(time-flashTime); 
+        StartCoroutine(FlashShield(flashTime));
+
+        yield return new WaitForSeconds(flashTime);
         Destroy(obj);
         isShield = false;
     }
+    IEnumerator FlashShield(float flashTime)
+    {
+        SpriteRenderer shieldRenderer = obj.GetComponent<SpriteRenderer>();
+        float flashInterval = 0.2f; // 깜빡이 반복시간
+        float elapsedTime = 0f;
 
+        while (elapsedTime < flashTime)
+        { 
+            shieldRenderer.enabled = !shieldRenderer.enabled;
+            yield return new WaitForSeconds(flashInterval);
+            elapsedTime += flashInterval;
+        } 
+    }
 }
