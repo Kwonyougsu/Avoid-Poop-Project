@@ -5008,6 +5008,7 @@ MonoBehaviour:
   nowScoreTxt: {fileID: 96685595}
   HighScoreText: {fileID: 1918913370}
   endPanel: {fileID: 845732741}
+  PasuePanel: {fileID: 807762594}
 --- !u!114 &1792592615
 MonoBehaviour:
   m_ObjectHideFlags: 0

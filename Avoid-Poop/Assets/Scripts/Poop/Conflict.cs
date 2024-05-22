@@ -38,9 +38,9 @@ public class Conflict : MonoBehaviour
             {
                 Debug.Log("Shield");
             }
-            else if(audioSource && audioSource.enabled)
+            else 
             {
-                audioSource.Play();
+                
                 HPManager.hp -= 1;
             }
 

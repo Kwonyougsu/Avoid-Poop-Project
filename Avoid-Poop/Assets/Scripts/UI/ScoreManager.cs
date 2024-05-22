@@ -17,6 +17,8 @@ public class ScoreManager : MonoBehaviour
 
     public static ScoreManager Instance;
     public GameObject endPanel;
+    public GameObject PasuePanel;
+
 
     private void Awake()
     {
@@ -58,5 +60,6 @@ public class ScoreManager : MonoBehaviour
         nowScoreTxt.text = $"{currentScore.ToString("N2")}";
         HighScoreText.text = $"{bestScore.ToString("N2")}";
         endPanel.SetActive(true);
+        PasuePanel.SetActive(false);
     }
 }
