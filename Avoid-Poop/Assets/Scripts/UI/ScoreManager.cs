@@ -54,6 +54,7 @@ public class ScoreManager : MonoBehaviour
 
     public void GameOver()
     {
+        Time.timeScale = 0f; 
         nowScoreTxt.text = $"{currentScore.ToString("N2")}";
         HighScoreText.text = $"{bestScore.ToString("N2")}";
         endPanel.SetActive(true);

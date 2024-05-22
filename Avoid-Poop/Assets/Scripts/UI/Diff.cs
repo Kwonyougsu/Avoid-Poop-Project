@@ -7,7 +7,6 @@ public class Diff : MonoBehaviour
 {
     public void SetDifficulty(float interval)
     {
-        DiffManager.Instance.SetDifficulty(interval);
-        BGMManager.Instance.OnDestroy();
+        DiffManager.Instance.SetDifficulty(interval);        
     }
 }

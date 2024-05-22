@@ -29,7 +29,7 @@ public class ButtonFunction : MonoBehaviour
     {
         AudioListener.volume = 0.0f;
     }
-    public void Close()
+    public void SoundsettingClose()
     {
         SoundSetting.SetActive(false);
     }
@@ -57,10 +57,12 @@ public class ButtonFunction : MonoBehaviour
     public void Pasue()
     {
         StopPanel.SetActive(true);
+        Time.timeScale=0f;
     }
 
     public void ClosePasue()
     {
         StopPanel.SetActive(false);
+        Time.timeScale=1f;
     }
 }

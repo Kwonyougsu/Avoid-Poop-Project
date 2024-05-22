@@ -330,6 +330,7 @@ MonoBehaviour:
   diffSelecet: {fileID: 1175020625}
   SoundSetting: {fileID: 839331575}
   RankingPanel: {fileID: 0}
+  StopPanel: {fileID: 0}
 --- !u!114 &58291713
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3651,8 +3652,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1338325201}
   - component: {fileID: 1338325200}
-  - component: {fileID: 1338325202}
-  - component: {fileID: 1338325203}
   m_Layer: 0
   m_Name: BGM
   m_TagString: Untagged
@@ -3771,32 +3770,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1338325202
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1338325199}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c57ece50c4865542a0a9033686ba496, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1338325203
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1338325199}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c74d0aff95e318c489ef89e5f60e4aa2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audioMixer: {fileID: 24100000, guid: 319392240d459524389f92e836680de5, type: 2}
-  audioSlider: {fileID: 735919073}
 --- !u!1 &1389416753
 GameObject:
   m_ObjectHideFlags: 0
@@ -4522,6 +4495,7 @@ MonoBehaviour:
   diffSelecet: {fileID: 0}
   SoundSetting: {fileID: 0}
   RankingPanel: {fileID: 418328971}
+  StopPanel: {fileID: 0}
 --- !u!114 &1686360900
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5012,6 +4986,7 @@ MonoBehaviour:
   diffSelecet: {fileID: 0}
   SoundSetting: {fileID: 0}
   RankingPanel: {fileID: 418328971}
+  StopPanel: {fileID: 0}
 --- !u!1 &1818094279
 GameObject:
   m_ObjectHideFlags: 0
@@ -5282,7 +5257,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 58291712}
         m_TargetAssemblyTypeName: ButtonFunction, Assembly-CSharp
-        m_MethodName: Close
+        m_MethodName: SoundsettingClose
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
