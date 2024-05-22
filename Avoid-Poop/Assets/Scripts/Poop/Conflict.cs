@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -19,16 +20,12 @@ public class Conflict : MonoBehaviour
     public AudioClip clear;
     public AudioClip fever;
 
-
     private void Awake()
     {
         audioSource = GetComponent<AudioSource>();
-        if(audioSource != null)
-        {
-            audioSource.playOnAwake = false;
-            audioSource.loop = false;
-        }
     }
+
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         
@@ -40,7 +37,9 @@ public class Conflict : MonoBehaviour
             }
             else 
             {
-                
+                PlaySound(Poop);
+                Debug.Log(audioSource);
+                Debug.Log(Poop); 
                 HPManager.hp -= 1;
             }
 
@@ -58,7 +57,8 @@ public class Conflict : MonoBehaviour
             {   
                 if(!isShield)
                 {
-                    isShield=true;
+                    PlaySound(shieldsound);
+                    isShield =true;
                     // Shield 프리팹을 인스턴스화하고 위치 설정
                     obj = Instantiate(shield, transform);
                 } 
@@ -77,8 +77,9 @@ public class Conflict : MonoBehaviour
                 
                 if(HPManager.hp < 5)
                 {
-                Debug.Log("Heal");
-                HPManager.hp += 1;
+                    Debug.Log("Heal");
+                    PlaySound(Heal);
+                    HPManager.hp += 1;
                 }
                 else
                 {
@@ -89,12 +90,14 @@ public class Conflict : MonoBehaviour
             else if(other.gameObject.name=="Fever(Clone)")
             {
                 Debug.Log("Fever");
+                PlaySound(fever);
                 //난이도에따른 점수계산구현후 추가구현할예정
             }
             //똥전부제거
             else if(other.gameObject.name=="Clear(Clone)")
             {   
                 Debug.Log("Clear");
+                PlaySound(clear);
                 // "Poop" 태그를 가진 모든 게임 오브젝트를 찾아 배열로 저장           
                 GameObject[] poopObjects = GameObject.FindGameObjectsWithTag("Poop");
                 // 배열에 저장된 각 게임 오브젝트를 제거
@@ -105,6 +108,7 @@ public class Conflict : MonoBehaviour
             }
         }
     }
+
     // 코루틴 사용 정해진시간이후에 값변경
     IEnumerator DisableShieldAfterTime(float time)
     {
@@ -128,5 +132,14 @@ public class Conflict : MonoBehaviour
             yield return new WaitForSeconds(flashInterval);
             elapsedTime += flashInterval;
         } 
+    }
+
+    private void PlaySound(AudioClip clip)
+    {
+        if (audioSource != null && clip != null)
+        {
+            audioSource.PlayOneShot(clip); 
+            //bgm 같은경우는 play , 효과음은 play one shot 
+        }
     }
 }
