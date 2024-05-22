@@ -11,15 +11,22 @@ public class Conflict : MonoBehaviour
     public bool isShield;
     private Coroutine shieldCoroutine;
     GameObject obj;
-    private AudioSource AudioSource;
+
+    AudioSource audioSource;
+    public AudioClip Poop;
+    public AudioClip Heal;
+    public AudioClip shieldsound;
+    public AudioClip clear;
+    public AudioClip fever;
+
 
     private void Awake()
     {
-        AudioSource = GetComponent<AudioSource>();
-        if(AudioSource != null)
+        audioSource = GetComponent<AudioSource>();
+        if(audioSource != null)
         {
-            AudioSource.playOnAwake = false;
-            AudioSource.loop = false;
+            audioSource.playOnAwake = false;
+            audioSource.loop = false;
         }
     }
     private void OnTriggerEnter2D(Collider2D other)
@@ -31,9 +38,9 @@ public class Conflict : MonoBehaviour
             {
                 Debug.Log("Shield");
             }
-            else if(AudioSource && AudioSource.enabled)
+            else if(audioSource && audioSource.enabled)
             {
-                AudioSource.Play();
+                audioSource.Play();
                 HPManager.hp -= 1;
             }
 
