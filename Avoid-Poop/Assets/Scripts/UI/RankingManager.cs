@@ -48,14 +48,14 @@ public class RankingManager : MonoBehaviour
 
     private void UpdateRankText()
     {
-        Ranker1.text = FormatRankText(bestName[0], bestScores[0]);
-        Ranker2.text = FormatRankText(bestName[1], bestScores[1]);
-        Ranker3.text = FormatRankText(bestName[2], bestScores[2]);
-        Ranker4.text = FormatRankText(bestName[3], bestScores[3]);
-        Ranker5.text = FormatRankText(bestName[4], bestScores[4]);
+        Ranker1.text = FormatRankText(bestName[0], bestScores[0].ToString("N2"));
+        Ranker2.text = FormatRankText(bestName[1], bestScores[1].ToString("N2"));
+        Ranker3.text = FormatRankText(bestName[2], bestScores[2].ToString("N2"));
+        Ranker4.text = FormatRankText(bestName[3], bestScores[3].ToString("N2"));
+        Ranker5.text = FormatRankText(bestName[4], bestScores[4].ToString("N2"));
     }
 
-    private string FormatRankText(string name, float score)
+    private string FormatRankText(string name, string score)
     {
         return $"{name} : {score}";
     }
@@ -65,7 +65,7 @@ public class RankingManager : MonoBehaviour
     {
         // 1위부터 아래로 검사를 하고 만약에 더 높은 점수가 나오면 반복문 돌리면서 1번에서 찾았다고 하면 아래서부터 땡기기
         // 5위부터 위로 변경
-        // 현재 점수가 5위 점수보다 높을 시
+        // 현재 점수가 5위 점수보다 높을 시 
 
         for (int i = 0; i < 5; i++)
         {
