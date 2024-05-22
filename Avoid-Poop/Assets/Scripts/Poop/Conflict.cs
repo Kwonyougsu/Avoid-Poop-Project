@@ -89,14 +89,12 @@ public class Conflict : MonoBehaviour
             //점수2배 아이탬
             else if(other.gameObject.name=="Fever(Clone)")
             {
-                Debug.Log("Fever");
                 PlaySound(fever);
                 //난이도에따른 점수계산구현후 추가구현할예정
             }
             //똥전부제거
             else if(other.gameObject.name=="Clear(Clone)")
             {   
-                Debug.Log("Clear");
                 PlaySound(clear);
                 // "Poop" 태그를 가진 모든 게임 오브젝트를 찾아 배열로 저장           
                 GameObject[] poopObjects = GameObject.FindGameObjectsWithTag("Poop");
