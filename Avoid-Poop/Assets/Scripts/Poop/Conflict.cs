@@ -89,12 +89,7 @@ public class Conflict : MonoBehaviour
                     Debug.Log("HP max(BonusScore)");
                 }
             }
-            //점수2배 아이탬
-            else if(other.gameObject.name=="Fever(Clone)")
-            {
-                PlaySound(fever);
-                //난이도에따른 점수계산구현후 추가구현할예정
-            }
+            
             //똥전부제거
             else if(other.gameObject.name=="Clear(Clone)")
             {   

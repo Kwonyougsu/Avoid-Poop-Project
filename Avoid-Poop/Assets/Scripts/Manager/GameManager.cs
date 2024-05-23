@@ -33,7 +33,7 @@ public class GameManager : MonoBehaviour
 
     private void MakeItem()
     {
-        int ItemNum = Random.Range(0, 4);
+        int ItemNum = Random.Range(0, 3);
         Instantiate(Item[ItemNum]);
     }
 

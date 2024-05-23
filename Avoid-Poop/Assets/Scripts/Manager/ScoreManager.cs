@@ -37,7 +37,6 @@ public class ScoreManager : MonoBehaviour
     {
         currentScore = 0;
         Time.timeScale = 1.0f; 
-
     }
 
     void Update()
@@ -63,12 +62,7 @@ public class ScoreManager : MonoBehaviour
                 break;
         }
         // time.time은 되도록 사용하지 않고 Time.deltaTime 로 사용한다 
-        currentScoreTxt.text = $"Score : {currentScore.ToString("N2")}";
-
-        if (currentScore > bestScore)
-        {
-            PlayerPrefs.SetFloat("BestScore", currentScore);
-        }
+        currentScoreTxt.text = $"Score : {currentScore.ToString("N2")}";        
     }
 
     public void GameOver()
@@ -78,5 +72,9 @@ public class ScoreManager : MonoBehaviour
         HighScoreText.text = $"{bestScore.ToString("N2")}";
         endPanel.SetActive(true);
         PasuePanel.SetActive(false);
+        if (currentScore > bestScore)
+        {
+            PlayerPrefs.SetFloat("BestScore", currentScore);
+        }
     }
 }
